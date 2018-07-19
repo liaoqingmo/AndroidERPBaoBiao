@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>如何利用git由本机向github上传文件 - lurunxiu - 博客园</title>
+<link type="text/css" rel="stylesheet" href="/bundles/blog-common.css?v=PX31qVjOE47mNaZI9JUSFK-ajuzMnpXA9PeteRNR1Qw1"/>
+<link id="MainCss" type="text/css" rel="stylesheet" href="/skins/BlueSky/bundle-BlueSky.css?v=_lYRTG5SjWWADGcuS8G-fWWj62fg5g8s6xd9-hRa-g01"/>
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/BlueSky/bundle-BlueSky-mobile.css?v=xpys-unA3grq_TeWJ40iCbv3xpRibOcl8nliujozjeY1"/>
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/testlurunxiu/rss"/>
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/testlurunxiu/rsd.xml"/>
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/testlurunxiu/wlwmanifest.xml"/>
+<script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">var currentBlogApp = 'testlurunxiu', cb_enable_mathjax=false;var isLogined=false;</script>
+<script src="/bundles/blog-common.js?v=oFpq70v3U1-c9rdP99iicoTFTCbQZF5NZNtH0AloVxg1" type="text/javascript"></script>
+</head>
+<body>
+<a name="top"></a>
+
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/testlurunxiu/"><img id="blogLogo" src="/Skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/testlurunxiu/">lurunxiu</a></h1>
+<h2></h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/testlurunxiu/">首页</a></li>
+<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/lurunxiu">联系</a></li>
+<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/testlurunxiu/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/testlurunxiu/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<span id="stats_post_count">随笔 - 13&nbsp; </span>
+<span id="stats_article_count">文章 - 2&nbsp; </span>
+<span id="stats-comment_count">评论 - 1</span>
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class = "post">
+		<h1 class = "postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/testlurunxiu/p/5874392.html">如何利用git由本机向github上传文件</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="blogpost-body"><p>首先，下载一个git，安装。</p>
+<p>安装成功之后，输入以下命令，引号内的为你自己的名字和邮箱<br />git config --global user.name "Your Name"<br />git config --global user.email "email@example.com"	</p>
+<p><span style="font-size: 16px;"><strong>创建一个版本库，就是存放工程的地方</strong></span><br />mkdir 文件名</p>
+<p><strong>git init（初始化仓库）</strong></p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915092619633-1276380979.png" alt="" /></p>
+<p><span style="line-height: 1.5;">初始化，初始化之后，通过ls -ah 可以看到目录下多了一个.git文件</span></p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915092505570-2146647744.png" alt="" /></p>
+<p><span style="font-size: 18px;"><strong>把文件添加到版本库</strong></span><br />首先新建一个文件（test.html），对其进行编辑内容<br />git add test.html（只提交当前目录的test.html文件到本地git仓库）</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915092712195-1028184377.png" alt="" /></p>
+<p>可能会出现如上图中的错误提示</p>
+<p>warning: LF will be replaced by CRLF in test.html.<br />The file will have its original line endings in your working directory.</p>
+<p><span style="color: #ff0000;">解决方法：</span></p>
+<p>1、再次输入如上命令，在命令之后加一个空格，回车</p>
+<p>2、如果还是不行，则执行git config core.autocrlf false命令之后，再次执行add命令就可成功。</p>
+<p>执行git add .（把所有内容添加到索引库中）</p>
+<p><strong>注意命令之后有个.</strong></p>
+<p><span style="font-size: 18px;"><strong>提交到本地仓库</strong></span><br />git commit -m "wrote a readme file" （提交索引库中的内容；-m是参数，表示注释内容，主要用来记录此次操作）</p>
+<p><span style="font-size: 18px;"><strong>上传到github</strong></span><br />使用如下命令来生成rsa公钥<br />ssh-keygen -t rsa -C "oldinaction@qq.com" （改成自己的邮箱）</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915093615539-1867913766.png" alt="" /></p>
+<p><span style="line-height: 1.5;">当然，那三个存放地址等命令你也可以直接回车，让其默认存放，如图所示，会提示你公钥文件存放位置</span></p>
+<p>进入存放目录，打开id_rsa.pub文件，复制里面的内容，一般是以ssh-rsa开头</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915093831773-499938032.png" alt="" /></p>
+<p><strong><span style="font-size: 18px;">打开github，注册/登录自己的账号</span></strong></p>
+<p>在账户设置里面，找到SSH and GPG keys设置，点击New SSH key，将之前复制的公钥加进去就ok</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915094743586-232929270.png" alt="" /></p>
+<p>利用如下命令测试是否能连接上github</p>
+<p>ssh -t git@github.com（若不成功，则去掉-t参数）</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915095156742-134864300.png" alt="" /></p>
+<p><span style="line-height: 1.5;">&nbsp;如果提示ssh: Could not resolve hostname \342\200\223t: Name or service not known</span></p>
+<p><span style="color: #ff0000;">解决办法：</span></p>
+<p>ssh -t -p 22 git@github.com （-p表示修改服务器端口为22）</p>
+<p>当提示输入(yes/no)?时在后面输入yes回车即可</p>
+<p>当看到欢迎语Hi oldinaction! You've successfully authenticated, but GitHub does not provide shell access.则表示链接成功。</p>
+<p>&nbsp;进入到要提交文件所在目录，git remote add origin git@github.com:demo/0915.git（git@github.com:demo/0915.git是github中创建项目的ssh地址）</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915095407164-515290469.png" alt="" /></p>
+<p><span style="color: #ff0000;">提示fatal: remote origin already exists 错误解决办法</span></p>
+<p>先git remote rm origin &nbsp;删除远程</p>
+<p>再远程添加仓库git remote add origin git@github.com:demo/0915.git（后面的地址<strong>git@github.com:github账号名/github项目名.git</strong>）</p>
+<p>如果执行 git remote rm origin 报错的话，我们可以手动修改gitconfig文件的内容</p>
+<p>vi .git/config</p>
+<p>把 [remote &ldquo;origin&rdquo;] 那一行删掉 &nbsp; 保存退出即可。</p>
+<p><span style="font-size: 18px;"><strong>提交到github上面</strong></span></p>
+<p>git push -u origin master，则提交成功，查看github，就可以看见文件已经上传成功</p>
+<p><img src="https://images2015.cnblogs.com/blog/912810/201609/912810-20160915095723805-1329877184.png" alt="" /><span style="line-height: 1.5;">&nbsp;</span></p>
+<p>&nbsp;</p></div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory"></div>
+<div id="EntryTag"></div>
+<div id="blog_post_info">
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"></div>
+</div>
+
+
+		</div>
+		<div class = "postDesc">posted @ <span id="post-date">2016-09-24 20:46</span> <a href='http://www.cnblogs.com/testlurunxiu/'>lurunxiu</a> 阅读(<span id="post_view_count">...</span>) 评论(<span id="post_comment_count">...</span>)  <a href ="https://i.cnblogs.com/EditPosts.aspx?postid=5874392" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(5874392);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=302694,cb_entryId=5874392,cb_blogApp=currentBlogApp,cb_blogUserGuid='94cabcb6-8ce9-e511-9fc1-ac853d9f53cc',cb_entryCreatedDate='2016/9/24 20:46:00';loadViewCount(cb_entryId);var cb_postType=1;</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id='comment_form' class='commentform'>
+<a name='commentform'></a>
+<div id='divCommentShow'></div>
+<div id='comment_nav'><span id='span_refresh_tips'></span><a href='javascript:void(0);' onclick='return RefreshCommentList();' id='lnk_RefreshComments' runat='server' clientidmode='Static'>刷新评论</a><a href='#' onclick='return RefreshPage();'>刷新页面</a><a href='#top'>返回顶部</a></div>
+<div id='comment_form_container'></div>
+<div class='ad_text_commentbox' id='ad_text_under_commentbox'></div>
+<div id='ad_t2'></div>
+<div id='opt_under_post'></div>
+<div id='cnblogs_c1' class='c_ad_block'></div>
+<div id='under_post_news'></div>
+<div id='cnblogs_c2' class='c_ad_block'></div>
+<div id='under_post_kb'></div>
+<div id='HistoryToday' class='c_ad_block'></div>
+<script type='text/javascript'>
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script type="text/javascript">loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright &copy;2018 lurunxiu
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+</body>
+</html>
